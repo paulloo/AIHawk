@@ -372,31 +372,8 @@ class LLMCoverLetterJobDescription(LLMCoverLetter):
             
             html_content = f"""
 <section id="cover-letter">
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
-        <div>
-            <p>丁东坡 (Paul)</p>
-            <p>江苏省苏州市吴江区开平路</p>
-            <p>215200</p>
-            <p>dongpoding@gmail.com</p>
-            <p>+86 15151508537</p>
-        </div>
-        <div style="text-align: right;">
-            <p>{self.company_name}</p>
-            <p>{self.company_name}公司地址</p>
-            <p>澳大利亚</p>
-        </div>
-    </div>
-    <div>
-        <p>Dear {self.recruiter_name},</p>
-        {cover_letter_content}
-        <p>Sincerely,</p>
-        <p>丁东坡 (Paul)</p>
-        <p>{today_date}</p>
-        <div style="margin-top: 20px;">
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/apaulloo/">https://www.linkedin.com/in/apaulloo/</a></p>
-            <p>GitHub: <a href="https://github.com/paulloo">https://github.com/paulloo</a></p>
-        </div>
-    </div>
+    <p>Dear {self.recruiter_name},</p>
+    {cover_letter_content}
 </section>"""
             
             logger.info("求职信生成成功")
